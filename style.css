@@ -68,6 +68,22 @@ body {
     
     margin-top: 1rem;
     margin-bottom: 1rem;
+    
+    width: 100%;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.prev-btn,
+.next-btn,
+.random-btn {
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 5px;
 }
 
 #pokemon-img {
@@ -95,7 +111,7 @@ body {
 #info {
     font-family: 'Mukta', sans-serif;
     font-weight: 700;
-    max-width: 50%;
+    max-width: 90%;
 }
 
 

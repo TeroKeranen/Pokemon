@@ -48,8 +48,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 // Function that show pokemon
-function showPokemon (pokemon) {
-    const item = pokemons[pokemon]
+function showPokemon () {
+    const item = pokemons[currentItem]
     img.src = item.img;
     name.textContent = item.name;
     type.textContent = item.type;
@@ -60,10 +60,29 @@ nextBtn.addEventListener('click', function () {
     // Add current item when pressing next btn
     currentItem++;
 
+    // when you scroll all pokemons it goes back to first pokemon
     if (currentItem > pokemons.length - 1) {
         currentItem = 0;
 
     }
-    showPerson(currentItem);
+    showPokemon(currentItem);
 })
 
+
+prevBtn.addEventListener('click', function () {
+
+    // when pressing prev btn it goes backwards
+    currentItem--;
+
+    if(currentItem < 0) {
+        currentItem = pokemons.length - 1;
+
+    }
+    showPokemon(currentItem);
+})
+
+// random pokemon when pressing random button
+randomBtn.addEventListener('click', function () {
+    currentItem = Math.floor(Math.random() * pokemons.length);
+    showPokemon();
+})
