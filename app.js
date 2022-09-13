@@ -1,3 +1,4 @@
+// List of pokemos
 const pokemons = [
     {
         id: 1,
@@ -24,14 +25,21 @@ const pokemons = [
     },
 ]
 
+// select img,name, type and indo ids
 const img = document.getElementById('pokemon-img');
 const name = document.getElementById('name');
 const type = document.getElementById('type');
 const info = document.getElementById('info');
 
+// Select buttons
+const nextBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+const randomBtn = document.querySelector('.random-btn');
 
 let currentItem = 0;
 
+
+// main programm
 window.addEventListener('DOMContentLoaded', function () {
 
     showPokemon(currentItem);
@@ -39,12 +47,23 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 
 
+// Function that show pokemon
 function showPokemon (pokemon) {
     const item = pokemons[pokemon]
     img.src = item.img;
     name.textContent = item.name;
     type.textContent = item.type;
     info.textContent = item.text;
-
-
 }
+
+nextBtn.addEventListener('click', function () {
+    // Add current item when pressing next btn
+    currentItem++;
+
+    if (currentItem > pokemons.length - 1) {
+        currentItem = 0;
+
+    }
+    showPerson(currentItem);
+})
+
