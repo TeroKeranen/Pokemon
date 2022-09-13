@@ -126,6 +126,7 @@ function showPokemon () {
     
 }
 
+// next pokemon
 nextBtn.addEventListener('click', function () {
     // Add current item when pressing next btn
     currentItem++;
@@ -135,10 +136,12 @@ nextBtn.addEventListener('click', function () {
         currentItem = 0;
 
     }
+    scrollTop();
     showPokemon(currentItem);
 })
 
 
+// Prev pokemon
 prevBtn.addEventListener('click', function () {
 
     // when pressing prev btn it goes backwards
@@ -148,11 +151,21 @@ prevBtn.addEventListener('click', function () {
         currentItem = pokemons.length - 1;
 
     }
+    scrollTop();
     showPokemon(currentItem);
 })
 
 // random pokemon when pressing random button
 randomBtn.addEventListener('click', function () {
     currentItem = Math.floor(Math.random() * pokemons.length);
+    scrollTop();
     showPokemon();
 })
+
+// When pokemon changes it takes you top of the page
+function scrollTop () {
+    window.scrollTo({
+        top: 0,
+        behavior : 'smooth',
+    })
+}
