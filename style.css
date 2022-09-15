@@ -31,10 +31,15 @@ Navbar
 
 nav {
     background:rgb(255, 255, 255) ;
+    box-shadow: 5px 5px 14px black;
 }
 
 a {
     text-decoration: none;
+}
+
+footer {
+    background:rgb(255, 255, 255) ;
 }
 
 
@@ -44,6 +49,7 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    
 }
 .nav-header h1 {
     font-size: 3rem;
@@ -163,6 +169,27 @@ a {
     box-shadow: 0px 5px 10px rgb(184, 181, 181);
 }
 
+.footer-header {
+    padding: 3rem;
+
+}
+
+.footer-header h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 2rem;
+}
+
+.footer-header h1 span {
+    border: 5px solid rgb(161, 63, 63, 30%);
+    border-radius: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+      
+}
+
+/* .footer-header span:last-child {
+    border-right: 2px solid red;
+} */
 
 #pokemon-img {
     width: 150px;
@@ -220,7 +247,15 @@ a {
         align-items: center;
         justify-content: space-around;
         padding: 1rem;
+        
+       
     }
+    .nav-header {
+        box-shadow: 0px 5px 14px black;
+    }
+    
+
+   
 
     .links {
         
@@ -229,8 +264,10 @@ a {
         height: auto;
         display: flex;
         
+        
     }
 
+    
    
     
 
@@ -248,6 +285,11 @@ a {
         
        
         transition: all 0.3s linear;
+    }
+
+    .footer-center {
+        margin-left: 8%;
+        
     }
 
     
